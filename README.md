@@ -14,6 +14,7 @@ git clone https://github.com/rolesucsd/LOggBe.git
 
 ```sh
 pip install -r requirements.txt
+conda create -n iqtree -c bioconda iqtree
 ```
 
 ## Usage
