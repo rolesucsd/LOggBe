@@ -34,6 +34,6 @@ Rates Summary: A text file named "rates.txt" that provides the relative rate of 
 
 The information from the rates summary can be combined with gene annotation data to draw conclusions about the speed of evolution for different types of genes.
 
-![Example Output](LoggBe_5.png|width=300)
+![Example Output](LoggBe_5.png)
 
 We appreciate your interest in LOggBe. If you encounter any issues or have suggestions for improvement, please don't hesitate to contact us.
