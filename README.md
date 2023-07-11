@@ -7,7 +7,7 @@ To install LOggBe, follow these steps:
 1. Clone the LOggBe repository:
    
 ```sh
-git clone [repository_url]
+git clone [[repository_url](https://github.com/rolesucsd/LOggBe.git)]
 ```
 
 2. Install the required dependencies:
