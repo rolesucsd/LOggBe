@@ -33,6 +33,6 @@ LOggBe generates the following outputs:
 
 The information from the rates summary can be combined with gene annotation data to draw conclusions about the speed of evolution for different types of genes.
 
-![Example Output](LoggBe_5.png)
+![Example Output](LOggBe.png)
 
 We appreciate your interest in LOggBe. If you encounter any issues or have suggestions for improvement, please don't hesitate to contact us.
