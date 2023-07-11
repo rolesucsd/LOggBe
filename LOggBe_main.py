@@ -1,6 +1,5 @@
 from remove_doubles import iterate_files, get_basename_without_extension, filter_alignment
 from evolution_rates import calculate_branch_lengths
-from faith_pd import faith_pd
 import os
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
@@ -47,14 +46,14 @@ def create_trees(directory, num_jobs):
 
 def run_iqtree(file):
     # Create phylogenetic trees
-    subprocess.call(['Scripts/Bash/iqtree.sh', file])
+    subprocess.call(['/panfs/roles/BF/Pangenome/iqtree.sh', file])
 
 # Specify the directory containing the alignment files
-alignment_directory = "B1/Panpiper/Pangenome/Alignment"
-group = "Metadata/group.txt"
+alignment_directory = "/panfs/roles/BF/Pangenome/Panaroo/aligned_gene_sequences"
+group = "/panfs/roles/BF/Pangenome/group.txt"
 
 # Specify the output directory for the filtered alignments
-output_directory = "B1/Output/Core"
+output_directory = "/panfs/roles/BF/Pangenome/Panaroo/Core"
 os.makedirs(output_directory, exist_ok=True)
 os.makedirs(output_directory+"/Alignment", exist_ok=True)
 os.makedirs(output_directory+"/Evolution", exist_ok=True)
@@ -63,10 +62,7 @@ os.makedirs(output_directory+"/Evolution", exist_ok=True)
 #process_alignment_files(alignment_directory, output_directory+"/Alignment")
 
 # Create phylogenetic trees
-#create_trees(output_directory+"/Alignment", 4)
+create_trees(output_directory+"/Alignment", 10)
 
 # Calculate branch lengths from IQTREE output files
-#calculate_branch_lengths(output_directory+"/Alignment", output_directory+"/Evolution")
-
-# Calculate faithspd from IQTREE output files
-faith_pd(output_directory+"/Alignment", group, output_directory+"/Evolution")
+calculate_branch_lengths(output_directory+"/Alignment", output_directory+"/Evolution")
