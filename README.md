@@ -27,11 +27,13 @@ logbee /path/to/alignment_directory /path/to/output_directory --jobs 10
 LOggBe generates the following outputs:
 
 Filtered Alignment: A processed alignment file containing the filtered sequences.
+
 Phylogenetic Tree: A tree file representing the evolutionary relationships among the core genes.
+
 Rates Summary: A text file named "rates.txt" that provides the relative rate of each core gene.
 
 The information from the rates summary can be combined with gene annotation data to draw conclusions about the speed of evolution for different types of genes.
 
-![Example Output](LoggBe_5.png)
+![Example Output](LoggBe_5.png|width=300)
 
 We appreciate your interest in LOggBe. If you encounter any issues or have suggestions for improvement, please don't hesitate to contact us.
